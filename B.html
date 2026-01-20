@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        /* This is the CSS part from the video */
+        :root {
+            --sugar: #c12131;
+            --puff: #fff;
+            --stroke: #1d1d1e;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #a0d9d9;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .cake {
+            width: 200px;
+            height: 100px;
+            background: var(--puff);
+            border-radius: 20px 20px 10px 10px;
+            position: relative;
+            border: 4px solid var(--stroke);
+            animation: bounce 2s infinite ease-in-out;
+        }
+        .frosting {
+            width: 100%;
+            height: 40px;
+            background: #7a5fff;
+            border-radius: 15px 15px 0 0;
+            position: absolute;
+            top: 0;
+        }
+        .candle {
+            width: 10px;
+            height: 40px;
+            background: #ffd700;
+            border: 2px solid var(--stroke);
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flame {
+            width: 12px;
+            height: 12px;
+            background: #ff4500;
+            border-radius: 50% 50% 20% 80%;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px #ff4500;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        h1 { margin-top: 20px; color: #1d1d1e; text-align: center; }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div class="cake">
+            <div class="frosting"></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+        <h1>Happy Birthday!</h1>
+    </div>
+</body>
+</html>
